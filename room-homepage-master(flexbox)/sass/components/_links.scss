@@ -1,0 +1,36 @@
+@use "../abstracts/" as a;
+
+a {
+  cursor: pointer;
+  color: var(--clr-primary-white);
+  font-size: 1.35rem;
+  text-align: center;
+
+  @include a.media-max(small) {
+    color: var(--clr-primary-black);
+    font-size: 1.6rem;
+  }
+  @include a.media-max(very-small) {
+    color: var(--clr-primary-black);
+    font-size: 1.3rem;
+  }
+}
+
+.shop-link {
+  color: var(--clr-primary-black);
+
+  @include a.media-max(small) {
+    font-size: 2rem;
+  }
+
+  @include a.media-max(very-small) {
+    font-size: 1rem;
+  }
+}
+
+li a {
+  @include a.media-max(small) {
+    display: block;
+    padding: 4rem 0;
+  }
+}

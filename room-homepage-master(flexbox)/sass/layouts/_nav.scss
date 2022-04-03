@@ -1,0 +1,18 @@
+@use "../abstracts" as a;
+
+nav {
+  color: var(--clr-primary-black);
+  width: 50%;
+  position: absolute;
+  padding: 5rem 0 0 0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include a.media-max(medium) {
+    width: 100%;
+  }
+  @include a.media-max(small) {
+    padding: 2.5rem 0 0 2.5rem;
+  }
+}

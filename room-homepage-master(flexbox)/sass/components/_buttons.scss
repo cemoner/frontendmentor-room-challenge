@@ -1,0 +1,10 @@
+@use "../abstracts/" as a;
+
+.hamburger-menu-icon {
+  display: none;
+  cursor: pointer;
+  @include a.media-max(small) {
+    display: block;
+    margin-left: 0rem;
+  }
+}

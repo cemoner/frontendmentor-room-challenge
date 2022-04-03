@@ -1,0 +1,66 @@
+@use "../abstracts/" as a;
+
+.one {
+  text-align: center;
+  margin-left: 2%;
+}
+
+.close {
+  display: none;
+}
+
+.one,
+.two {
+  width: 5em;
+  @include a.media-max(very-small) {
+    width: 4em;
+  }
+}
+.two {
+  display: none;
+  position: fixed;
+  z-index: 30;
+  left: 5%;
+  @include a.media-max(small) {
+    top: 2.75rem;
+  }
+  @include a.media-max(very-small) {
+    top: 3rem;
+    left: 4%;
+  }
+}
+
+.open {
+  display: block !important;
+}
+
+.four {
+  width: 4em;
+  display: inline-block;
+  @include a.media-max(very-small) {
+    width: 6em;
+  }
+  position: static;
+}
+
+.three {
+  width: 8em;
+  text-align: center;
+  @include a.media-max(small) {
+    width: 12em;
+    position: absolute;
+    left: 40%;
+  }
+  @include a.media-max(very-small) {
+    width: 8em;
+  }
+}
+
+svg {
+  max-width: 100%;
+}
+
+.five,
+.six {
+  width: 3.5rem;
+}

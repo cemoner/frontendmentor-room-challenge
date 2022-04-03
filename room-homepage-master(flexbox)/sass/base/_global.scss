@@ -1,0 +1,6 @@
+@use "../abstracts/" as a;
+
+.wrapper {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
