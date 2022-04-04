@@ -3,7 +3,7 @@
 In this project I am trying to implement what I learned about the best practices
 correct units,
 sass @use and @forward,
-sass partials for organizing files and sass folder structure,
+sass partials for organizing files, sass folder structure,
 sass mixins for less code,
 css maps for breakpoints for responsive design,
 and css slider animations(no library)
