@@ -1,0 +1,17 @@
+@use "../abstracts/" as a;
+
+main {
+  min-height: 100vh;
+}
+
+.top-container,
+.bottom-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  @include a.media-max(medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.top-container {
+  position: relative;
+}

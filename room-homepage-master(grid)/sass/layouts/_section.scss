@@ -1,0 +1,103 @@
+@use "../abstracts" as a;
+.section-top {
+  // >= medium
+  grid-column: span 4;
+  //-------------------
+  padding: 0 9rem;
+  justify-content: center;
+  @include a.media-max(medium) {
+    padding: 7rem;
+    margin-bottom: 0;
+  }
+  @include a.media-max(small) {
+    padding: 4rem;
+    margin-bottom: 0;
+  }
+  position: relative;
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+.section-bottom {
+  flex-grow: 1;
+  grid-column: span 4;
+  justify-content: center;
+  padding: 5rem;
+
+  @include a.media-max(medium) {
+    padding: 7rem;
+  }
+  @include a.media-max(small) {
+    padding: 4rem;
+  }
+
+  @include a.media-max(very-small) {
+    padding: 4rem 3rem;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  @include a.media-max(medium) {
+    & {
+      grid-column: span 3;
+    }
+  }
+}
+
+.section-fade-forward {
+  animation: fade-forward 0.15s linear forwards;
+}
+
+.section-fade-backward {
+  animation: fade-backward 0.15s linear forwards;
+}
+
+.section-switch-forward {
+  animation: slide-forward 0.15s linear forwards;
+}
+
+.section-switch-backward {
+  animation: slide-backward 0.15s linear;
+}
+
+@keyframes slide-forward {
+  0% {
+    transform: translateX(-800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-backward {
+  0% {
+    transform: translateX(800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-forward {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(800px);
+    opacity: 1;
+  }
+}
+@keyframes fade-backward {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-800px);
+  }
+}

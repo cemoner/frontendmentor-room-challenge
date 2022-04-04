@@ -1,0 +1,110 @@
+@use "../abstracts/" as a;
+
+html {
+  font-size: 62.5%;
+  font-family: "Spartan", sans-serif;
+  @include a.media-max(large) {
+    font-size: 50%;
+  }
+  @include a.media-max(small) {
+    font-size: 45%;
+  }
+  @include a.media-max(very-small) {
+    font-size: 40%;
+  }
+  @include a.media-max(tiny) {
+    font-size: 20%;
+  }
+}
+
+// headers
+
+h2 {
+  font-size: 3.4rem;
+  margin-bottom: 3rem;
+  align-self: flex-start;
+
+  @include a.media-max(medium) {
+    font-size: 4.75rem;
+  }
+
+  @include a.media-max(small) {
+    font-size: 4rem;
+  }
+  @include a.media-max(very-small) {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  letter-spacing: 0.75rem;
+  margin-bottom: 1.5rem;
+
+  @include a.media-max(medium) {
+    font-size: 3rem;
+  }
+
+  @include a.media-max(small) {
+    font-size: 2.25rem;
+  }
+
+  @include a.media-max(very-small) {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+h2,
+h3 {
+  color: var(--clr-primary-black);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+// ----------------------------
+
+// paragraphs
+
+.paragraph-one {
+  margin-bottom: 2rem;
+}
+
+.paragraph-one,
+.paragraph-two {
+  color: var(--clr-primary-gray);
+  line-height: 1.7;
+  font-size: 1.4rem;
+
+  @include a.media-max(large) {
+    font-size: 1.6rem;
+  }
+
+  @include a.media-max(medium) {
+    font-size: 2rem;
+  }
+
+  @include a.media-max(small) {
+    font-size: 1.75rem;
+    line-height: 2;
+  }
+  @include a.media-max(very-small) {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.paragraph-two {
+  line-height: 1.7;
+  @include a.media-max(medium) {
+    margin-bottom: 5rem;
+  }
+}
+
+// ----------------
+
+.shop-link {
+  font-size: 1.5rem;
+  letter-spacing: 0.75rem;
+}
